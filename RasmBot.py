@@ -7,7 +7,6 @@ from aiogram import Bot, Dispatcher, html
 from aiogram.filters import CommandStart
 from aiogram.types import Message
 from aiogram import types
-import aiogram
 
 
 
