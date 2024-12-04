@@ -9,14 +9,9 @@ from aiogram.types import Message
 from aiogram import types
 
 
-
-# Your Telegram bot token
 TOKEN = "7987999927:AAFWnRpM226hADJ_R307JigIApUhJAcE84k"
-# Your Pixabay API Key
 PIXABAY_API_KEY = "47447451-81b1be152c3dc058228477c90"
 
-
-# Initialize the Dispatcher
 dp = Dispatcher()
 
 # Function to get image URL from Pixabay API
