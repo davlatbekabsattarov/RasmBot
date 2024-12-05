@@ -45,7 +45,7 @@ def get_image_url(query):
 
 @dp.message(CommandStart())
 async def command_start_handler(message: Message) -> None:
-    await message.answer(f"Assalamu aleykum, <b>{message.from_user.full_name}</b>!\nQidirmoqchi bo'lgan rasmingizni kiriting:", parse_mode=ParseMode.HTML)
+    await message.answer(f"Assalamu aleykum, <b>{message.from_user.full_name}</b>!\nEnter the name of picture you want to see", parse_mode=ParseMode.HTML)
 
 @dp.message()
 async def image_sender(message: types.Message):
@@ -57,10 +57,10 @@ async def image_sender(message: types.Message):
             # Send the image
             await message.answer_photo(image_url)
         else:
-            await message.answer("Bu mavzuga oid rasm topilmadi.")
+            await message.answer("No image found")
     except Exception as e:
         # Handle other exceptions
-        await message.answer(f"Yaxshi urunish! Xato: {str(e)}")
+        await message.answer(f"Nice try Wrong: {str(e)}")
 
 async def main() -> None:
     # Initialize Bot instance with default bot properties which will be passed to all API calls
